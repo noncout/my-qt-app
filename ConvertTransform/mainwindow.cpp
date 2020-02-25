@@ -39,7 +39,7 @@ void MainWindow::init()
     //SystemTrayIcon
     system_tray_ = new QSystemTrayIcon(this);
     system_tray_->setIcon(QIcon(":/icon/convert.png"));
-    system_tray_->setToolTip(QStringLiteral("路径转换工具"));
+    system_tray_->setToolTip("路径转换工具");
     system_tray_->show();
 
     QMenu * menu = new QMenu(this);
