@@ -91,6 +91,7 @@ void MainWindow::on_btn_copy_clicked()
 
 void MainWindow::on_checkBox_auto_pop_stateChanged(int arg1)
 {
+    Q_UNUSED(arg1)
     QSettings * config = new QSettings("format.ini", QSettings::IniFormat,this);
     if(ui->checkBox_auto_pop->isChecked())
     {
@@ -104,6 +105,7 @@ void MainWindow::on_checkBox_auto_pop_stateChanged(int arg1)
 
 void MainWindow::on_checkBox_backslash_stateChanged(int arg1)
 {
+    Q_UNUSED(arg1)
     QSettings * config = new QSettings("format.ini", QSettings::IniFormat,this);
     if(ui->checkBox_backslash->isChecked())
     {
@@ -120,6 +122,7 @@ void MainWindow::onSystemTrayActivated(QSystemTrayIcon::ActivationReason reason)
     case QSystemTrayIcon::ActivationReason::Trigger:
     case QSystemTrayIcon::ActivationReason::DoubleClick:
         this->show();
+        break;
     default:
         break;
     }

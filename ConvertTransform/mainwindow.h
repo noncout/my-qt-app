@@ -14,7 +14,8 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+
+    ~MainWindow() override;
 
     void init();
 
@@ -26,6 +27,7 @@ protected:
     void reallyClose();
 
 private slots:
+
     void on_btn_convert_clicked();
 
     void on_btn_copy_clicked();
